@@ -3262,35 +3262,3 @@ local plr = game.Players.LocalPlayer
             loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
             end)
    end,
-
-
-local plr = game.Players.LocalPlayer
-
--- WalkSpeed functionality activated immediately
-local function activateWalkSpeed()
-    down = false
-
-    function onButton1Down(mouse)
-        down = true
-        while down do
-            if not down then break end
-            local char = plr.Character
-            char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 140
-            wait()
-        end
-    end
-
-    function onButton1Up(mouse)
-        down = false
-    end
-
-    function onSelected(mouse)
-        mouse.KeyDown:connect(function(k) if k:lower() == "x" then onButton1Down(mouse) end end)
-        mouse.KeyUp:connect(function(k) if k:lower() == "x" then onButton1Up(mouse) end end)
-    end
-
-    onSelected(plr:GetMouse())
-end
-
--- Activate WalkSpeed automatically
-activateWalkSpeed()
