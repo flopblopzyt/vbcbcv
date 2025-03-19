@@ -3263,6 +3263,7 @@ local plr = game.Players.LocalPlayer
             end)
    end,
 
+
 local plr = game.Players.LocalPlayer
 
 -- WalkSpeed functionality activated immediately
@@ -3293,5 +3294,3 @@ end
 
 -- Activate WalkSpeed automatically
 activateWalkSpeed()
-})
-
